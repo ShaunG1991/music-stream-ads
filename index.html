@@ -59,6 +59,21 @@
       font-size:14px;
       opacity:0.6;
     }
+    .album {
+      background:#1a1a1a;
+      margin:20px auto;
+      padding:15px;
+      max-width:700px;
+      cursor:pointer;
+    }
+    .album h2 {
+      margin:0;
+    }
+    .tracks {
+      display:none;
+      margin-top:15px;
+    } 
+    
   </style>
 </head>
 
@@ -73,24 +88,44 @@
   <p>Advertisement</p>
 </div>
 
-<section style="max-width:700px;margin:30px auto;">
-  <h2>🎧 Album: Wigan Pier Live</h2>
+<div class="album" onclick="toggleAlbum('album1')">
+  <h2>wigan pier live</h2>
 
-  <p>Track 1</p>
-  <audio controls>
-    <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767374036/02_Track_2_xlnlre.flac" type="audio/mpeg">
-  </audio>
+  <div class="tracks" id="album1">
+    <p>Rise</p>
+    <audio controls>
+      <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767373848/01_Track_1_ika6qo.flac" type="audio/mpeg">
+    </audio>
 
-  <p>Track 2</p>
-  <audio controls>
-    <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767373848/01_Track_1_ika6qo.flac" type="audio/mpeg">
-  </audio>
+    <p>Flow</p>
+    <audio controls>
+      <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767374036/02_Track_2_xlnlre.flac" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
 
-  <p>Track 3</p>
-  <audio controls>
-    <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767373948/03_Track_3_kqhmuj.flac" type="audio/mpeg">
-  </audio>
-</section>
+   <p>Flow</p>
+    <audio controls>
+      <source src="https://res.cloudinary.com/dnois9wdn/video/upload/v1767373948/03_Track_3_kqhmuj.flac" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="album" onclick="toggleAlbum('album2')">
+  <h2>📀 Night Drive</h2>
+
+  <div class="tracks" id="album2">
+    <p>Midnight</p>
+    <audio controls>
+      <source src="CLOUDINARY_TRACK_3_URL" type="audio/mpeg">
+    </audio>
+
+    <p>Neon Roads</p>
+    <audio controls>
+      <source src="CLOUDINARY_TRACK_4_URL" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
 
 <div class="ad-box">
   <p>Advertisement</p>
@@ -108,5 +143,14 @@
   © 2026 My Music Platform
 </footer>
 
+<script>function toggleAlbum(id) {
+const album =
+document.getElementById(id);
+album.style.display =
+  album.style.display === "block" ?
+  "none" : "block";
+}
+</script>
+  
 </body>
 </html>
